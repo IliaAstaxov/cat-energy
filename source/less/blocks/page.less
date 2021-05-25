@@ -1,0 +1,38 @@
+// стили всей страницы
+
+.page {
+  font-family: "Oswald", Arial, serif;
+  height: 100%; /*чтобы подвал прижимался к нижней части страницы (уточнить этот момент) */
+}
+
+.page__body {
+  /* задаю основной цвет подложки */
+  background-color: @background-color;
+  color: @main-color;
+  .zeroing;
+  width: 100%;
+}
+
+.page__body--preview {
+  @media (min-width: @desktop-width) {
+    //для позиционирования зеленого фона в десктопной версии
+    position: relative;
+
+    &::before {
+      content: "";
+      display: block;
+      min-height: 646px;
+      width: 50%;
+      position: absolute;
+      top: 0;
+      right: 0;
+      background-image: url(../img/cat-background-desktop.png);
+      background-repeat: no-repeat;
+      background-size: cover;
+      z-index: -2;
+      @media (min-resolution: 2dppx) {
+        background-image: url(../img/cat-background-desktop@2x.png);
+      }
+    }
+  }
+}

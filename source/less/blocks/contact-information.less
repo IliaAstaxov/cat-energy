@@ -1,0 +1,226 @@
+// блок формы с контактными данными
+
+.contact-information {
+  /* Главному контейнеру убираем рамку, добавляем позиционирование, чтобы декоративные линии выходили за рамки wrapper */
+  .bordering;
+  .zeroing;
+  @media (min-width: @tablet-width) {
+    position: relative;
+  }
+}
+
+.contact-information__wrapper {
+  /* задаем отступы для секции контактных данных и верхний отступ для заголовка */
+  @media (max-width: @mobile-width-only) {
+    margin: 0 20px;
+    padding-top: 26px;
+  }
+  @media (min-width: @tablet-width) {
+    margin: 0 30px 0 70px;
+    padding-top: 76px;
+  }
+  @media (min-width: @desktop-width) {
+    margin: 0 auto;
+    width: 1220px;
+  }
+}
+
+.contact-information__title {
+  /* верставем заголовок и линию к нему, прорядок действий, делаем заголовок relative создаем псевдоэлементы, абсолютно позиционируем их, первому задаем ширину 100vw (будет выходить на полную ширину, но только справа, ибо начало относительно начала блока, второй псевдоэлемент наслаиваем на первый, и задаем статичное значение) */
+  padding: 0;
+  @media (max-width: @mobile-width-only) {
+    font-size: 24px;
+    line-height: 26px;
+    width: 187px;
+    margin-bottom: 34px;
+    position: relative;
+
+    &::before {
+      content: "";
+      display: block;
+      width: 100vw;
+      height: 2px;
+      background-color: #68b738;
+      position: absolute;
+      top: 50%;
+      z-index: -2;
+    }
+    &::after {
+      content: "";
+      display: block;
+      height: 4px;
+      width: 190px;
+      background-color: white;
+      position: absolute;
+      top: 49%;
+      left: 0;
+      z-index: -1;
+    }
+  }
+  @media (min-width: @tablet-width) {
+    font-size: 36px;
+    line-height: 36px;
+    width: 550px;
+    margin-bottom: 76px;
+
+    &::before {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 2px;
+      background-color: #68b738;
+      position: absolute;
+      left: 0px;
+      top: 29%;
+      z-index: -2;
+    }
+    &::after {
+      content: "";
+      display: block;
+      width: 600px;
+      height: 10px;
+      background-color: white;
+      position: absolute;
+      left: 60px;
+      top: 27%;
+      z-index: -1;
+    }
+  }
+  @media (min-width: @desktop-width) {
+    &::before {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 2px;
+      background-color: #68b738;
+      position: absolute;
+      left: 0px;
+      top: 31%;
+      z-index: -2;
+    }
+    &::after {
+      content: "";
+      display: block;
+      width: 600px;
+      height: 10px;
+      background-color: white;
+      position: relative;
+      left: -20px;
+      top: -17px;
+      z-index: -1;
+    }
+  }
+}
+
+.contact-information__list {
+  /* убираем отступы и булиты у списка */
+  .zeroing;
+  .buliting;
+  /* делаем ul для полей ввода flex элементом, c нужным расположением */
+  @media (max-width: @mobile-width-only) {
+    display: flex;
+    flex-direction: column;
+  }
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: column;
+  }
+  @media (min-width: @desktop-width) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 40px;
+  }
+}
+
+.contact-information__label {
+  /* ровняем название поля и само поле, даем отступы между элементами, задаем позиционирование, чтобы настроить иконку внутри поля */
+  @media (max-width: @mobile-width-only) {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    position: relative;
+  }
+  @media (min-width: @tablet-width) {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    position: relative;
+  }
+  @media (min-width: @desktop-width) {
+    width: 569px;
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+}
+
+/* задаем размеры, цвет, и отступы названиям полей */
+.contact-information__name {
+  color: @contact-information-label-color;
+  @media (max-width: @mobile-width-only) {
+    font-size: 16px;
+    line-height: 18px;
+    margin-right: 15px;
+    flex-shrink: 0;
+  }
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+    margin-right: 15px;
+    flex-shrink: 0;
+  }
+}
+
+.contact-information__input {
+  /* задаем размеры поля ввода, внутренние отступы и бордер */
+  @media (max-width: @mobile-width-only) {
+    font-size: 16px;
+    line-height: 18px;
+    text-transform: uppercase;
+    font-family: Oswald;
+    width: 100%;
+    padding: 11px 15px;
+    border: 1px solid #cdcdcd;
+  }
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+    text-transform: uppercase;
+    font-family: Oswald;
+    width: 100%;
+    padding: 10px 20px 10px;
+    border: 1px solid #cdcdcd;
+  }
+}
+
+input[type="email"]::-moz-placeholder {
+  /* задаем стили placeholder-ам инпута email адреса */
+  color: @contact-information-label-color;
+}
+input[type="email"]::-webkit-input-placeholder {
+  /* задаем стили placeholder-ам инпута email адреса */
+  color: @contact-information-label-color;
+}
+
+input[type="tel"]::-moz-placeholder {
+  /* задаем стили placeholder-ам инпута номера телефона */
+  color: @contact-information-label-color;
+}
+input[type="tel"]::-webkit-input-placeholder {
+  /* задаем стили placeholder-ам инпута номера телефона */
+  color: @contact-information-label-color;
+}
+
+.contact-information__label svg {
+  @media (max-width: @mobile-width-only) {
+    position: absolute;
+    top: 13px;
+    right: 15px;
+  }
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    top: 17px;
+    right: 17px;
+  }
+}

@@ -1,0 +1,90 @@
+// стилизация шапки сайта
+
+// сетки шапки сайта
+
+.page-header {
+  width: 100%;
+}
+
+.page-header__position {
+  /* создан блок для того, чтобы спозиционировать под него выпадающий список и кнопку меню (div page-header__wrapper не мог, т.к. это grid) */
+  position: relative;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 66px;
+    width: 100%;
+    height: 1px;
+    background-color: black;
+  }
+
+  @media (min-width: @tablet-width) {
+    margin-top: 24px;
+
+    /* для того, чтобы убрать черту */
+    &::before {
+      display: none;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 44px;
+  }
+}
+
+.page-header__wrapper {
+  min-height: 66px;
+  margin: 0 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: minmax(51px, auto) auto;
+
+  @media (min-width: @tablet-width) {
+    min-height: 55px;
+    margin: 0 30px;
+    grid-template-rows: minmax(55px auto);
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1220px;
+    margin: 0 auto;
+    grid-template-columns: 610px 610px;
+    grid-template-rows: minmax(81px auto);
+  }
+}
+
+.page-header__logo {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 66px;
+
+  @media (min-width: @tablet-width) {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    justify-content: start;
+    min-height: 51px;
+  }
+
+  @media (min-width: @desktop-width) {
+    min-height: 81px;
+  }
+}
+
+.page-header__image {
+  width: 37px;
+  height: 33px;
+
+  @media (min-width: @tablet-width) {
+    margin-right: 10px;
+  }
+}
+
+.page-header__image-text {
+  width: 101px;
+  height: 18px;
+}

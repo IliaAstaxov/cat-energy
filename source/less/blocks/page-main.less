@@ -1,0 +1,59 @@
+// заголовок для каталога (подумать над оптимизицией)
+
+// заголовок для страницы каталога (постараться оптимизировать)
+
+.page-main {
+  width: 100%;
+}
+
+.page-main__headline-container {
+  @media (max-width: @mobile-width-only) {
+    margin: 0 20px;
+    position: relative;
+
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      left: -20px;
+      bottom: 1px;
+      width: 100vw;
+      height: 1px;
+      background-color: #ebebeb;
+    }
+  }
+  @media (min-width: @tablet-width) {
+    margin: 0 30px;
+  }
+  @media (min-width: @desktop-width) {
+    margin: 0 auto;
+    width: 1220px;
+  }
+}
+
+.page-main__headline {
+  /* размеры заголовку каталога */
+  @media (max-width: @mobile-width-only) {
+    font-size: 36px;
+    line-height: 36px;
+    padding-top: 26px;
+    padding-bottom: 41px;
+    margin: 0px;
+  }
+  @media (min-width: @tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
+    padding-top: 55px;
+    margin: 0 0 168px 0;
+  }
+  @media (min-width: @desktop-width) {
+    margin: 0 0 137px 0;
+  }
+}
+
+.page-main__catalog-field {
+  @media (min-width: @tablet-width) {
+    height: auto;
+    width: 100%;
+  }
+}

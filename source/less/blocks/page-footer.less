@@ -1,0 +1,111 @@
+// общие стили для footer
+
+.page-footer {
+  background-color: @grey-background-color;
+}
+
+.page-footer__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @media (max-width: @mobile-width-only) {
+    margin: 0 20px;
+  }
+  @media (min-width: @tablet-width) {
+    margin: 0 30px;
+    min-height: 150px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  @media (min-width: @desktop-width) {
+    margin: 0 auto;
+    width: 1220px;
+  }
+}
+
+.page-footer__logo {
+  @media (max-width: @mobile-width-only) {
+    min-height: 96px;
+    width: 100%;
+    border-bottom: 1px solid black;
+    display: flex;
+    margin: auto;
+  }
+  @media (min-width: @tablet-width) {
+    width: 132px;
+    height: 30px;
+  }
+}
+
+.logo__link {
+  @media (max-width: @mobile-width-only) {
+    width: 130px;
+    height: 30px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 132px;
+    height: 30px;
+  }
+}
+
+.page-footer__social {
+  @media (max-width: @mobile-width-only) {
+    width: 100%;
+    min-height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid black;
+  }
+  @media (min-width: @tablet-width) {
+    width: 140px;
+    height: 35px;
+  }
+}
+
+.social__list {
+  @media (max-width: @mobile-width-only) {
+    width: 125px;
+    min-height: 52px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+  }
+  @media (min-width: @tablet-width) {
+    width: 122px;
+    height: 35px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+  }
+}
+
+.page-footer__copywrite {
+  @media (max-width: @mobile-width-only) {
+    width: 100%;
+    min-height: 78px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  @media (min-width: @tablet-width) {
+    width: 164px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}

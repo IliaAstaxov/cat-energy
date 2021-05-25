@@ -1,0 +1,132 @@
+// стили для блока контактов в footer
+
+.contacts {
+  /*продублировал базовый слой, так как в footer будет стоять серый */
+  background-color: @background-color;
+  width: 100%;
+  @media (min-width: @desktop-width) {
+    position: relative;
+  }
+}
+
+.contacts__wrapper {
+  @media (max-width: @mobile-width-only) {
+    margin: 0 20px;
+  }
+  @media (min-width: @tablet-width) {
+    margin: 0 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0 auto;
+    width: 1220px;
+    position: relative;
+  }
+}
+
+.contacts__text-container {
+  @media (max-width: @mobile-width-only) {
+    min-height: 104px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+
+  @media (min-width: @tablet-width) {
+    min-height: 191px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  @media (min-width: @desktop-width) {
+    position: absolute;
+    min-height: 201px;
+    width: 570px;
+    background-color: white;
+    top: 95px;
+  }
+}
+
+.contacts__text-container--grey {
+  background-color: #f2f2f2;
+}
+
+.contacts__headline {
+  @media (max-width: @mobile-width-only) {
+    /*стили для заголовка контактов */
+    width: 140px;
+    font-size: 16px;
+    line-height: 18px;
+    text-transform: uppercase;
+    margin: 0;
+    font-weight: 400;
+    color: @contackts-headline-color;
+  }
+  @media (min-width: @tablet-width) {
+    width: 171px;
+    font-size: 20px;
+    line-height: 21px;
+    text-transform: uppercase;
+    margin: 0;
+    font-weight: 400;
+    color: @contackts-headline-color;
+  }
+  @media (min-width: @desktop-width) {
+    margin-left: 76px;
+  }
+}
+
+.contacts__adress {
+  @media (max-width: @mobile-width-only) {
+    /*стили для описания контактов */
+    width: 140px;
+    font-family: Arial;
+    font-size: 14px;
+    line-height: 20px;
+    margin: 0;
+    color: @contacts-adress-color;
+  }
+  @media (min-width: @tablet-width) {
+    width: 159px;
+    font-family: Arial;
+    font-size: 16px;
+    line-height: 20px;
+    margin: 0;
+    color: @contacts-adress-color;
+    text-align: right;
+    span {
+      display: block;
+      margin-top: 20px;
+    }
+  }
+  @media (min-width: @desktop-width) {
+    margin-right: 89px;
+  }
+}
+
+.contacts__map {
+  @media (max-width: @mobile-width-only) {
+    height: 362px;
+    width: auto;
+    iframe {
+      height: 100%;
+      width: 100%;
+      border: 0;
+    }
+  }
+  @media (min-width: @tablet-width) {
+    height: 400px;
+    width: auto;
+    iframe {
+      height: 100%;
+      width: 100%;
+      border: 0;
+    }
+  }
+}

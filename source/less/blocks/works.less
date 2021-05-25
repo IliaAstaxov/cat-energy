@@ -1,0 +1,124 @@
+// Стилизация для блока "как это работает?"
+
+.works {
+  @media (max-width: @mobile-width-only) {
+    width: 100%;
+    outline: 5px solid red;
+    outline-offset: -5px;
+  }
+}
+
+.works__wrapper {
+  @media (max-width: @mobile-width-only) {
+    margin: 0 20px;
+  }
+  @media (min-width: @tablet-width) {
+    margin: 0 30px;
+  }
+  @media (min-width: @desktop-width) {
+    margin: 0 auto;
+    width: 1220px;
+  }
+}
+
+.works__headline {
+  /*задаем стили для заголовка */
+  font-size: 36px;
+  line-height: 40px;
+  text-transform: uppercase;
+  margin-top: 38px;
+  margin-right: 10px;
+}
+
+.works__list {
+  /* убираем булиты у списка, убираем отступы */
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  @media (max-width: @mobile-width-only) {
+    display: flex;
+    flex-direction: column;
+  }
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-right: 82px;
+    counter-reset: number 0;
+  }
+}
+
+.works__item {
+  @media (max-width: @mobile-width-only) {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    margin-bottom: 22px;
+    &::before {
+      content: "";
+      display: block;
+      width: 60px;
+      height: 60px;
+      margin-right: 20px;
+      background-color: green; /* временно */
+      flex-shrink: 0;
+    }
+    &:last-child {
+      margin-bottom: 42px;
+    }
+  }
+
+  &.works__item--paper::before {
+    @media (max-width: @mobile-width-only) {
+      content: "";
+      display: block;
+      background-image: url(../img/leaf.svg);
+      background-position: center;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 36.6%;
+    min-height: 280px;
+    flex-direction: column;
+    counter-increment: number;
+    position: relative;
+    &:nth-child(2n) {
+      margin-left: auto;
+    }
+    &::before {
+      content: "";
+      display: block;
+      width: 80px;
+      height: 80px;
+      background-color: green; /* временно */
+      margin-bottom: 30px;
+    }
+
+    &::after {
+      content: counter(number);
+      position: absolute;
+      font-size: 280px;
+      line-height: 280px;
+      color: #f2f2f2;
+      z-index: -1;
+      top: -24px;
+      right: 8%;
+    }
+  }
+  @media (min-width: @desktop-width) {
+    width: 230px;
+    margin: 0 auto;
+  }
+}
+
+.works__item-text {
+  /* задаем стили для текста */
+  font-family: Arial;
+  font-size: 14px;
+  line-height: 18px;
+  color: @color-for-item-works;
+  padding: 0;
+  margin: 0;
+}

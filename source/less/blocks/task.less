@@ -1,0 +1,123 @@
+// Пишем стили для блока задач
+
+.task {
+  width: 100%;
+  @media (max-width: @mobile-width-only) {
+    outline: 5px solid green;
+    outline-offset: -5px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 82px;
+    margin-bottom: 71px;
+  }
+}
+
+.task__wrapper {
+  @media (max-width: @mobile-width-only) {
+    margin: 0 20px;
+  }
+  @media (min-width: @tablet-width) {
+    margin: 0 30px;
+  }
+  @media (min-width: @desktop-width) {
+    margin: 0 auto;
+    width: 1220px;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.task__item {
+  /* задаем фоны для блока похудения и набора массы */
+  @media (max-width: @mobile-width-only) {
+    padding: 38px 0 0 0;
+    margin: 0 0 20px 0;
+    background-color: @grey-background-color;
+  }
+  @media (min-width: @tablet-width) {
+    padding: 84px 0 45px 0;
+    margin: 0 0 30px 0;
+    background-color: @grey-background-color;
+  }
+  @media (min-width: @desktop-width) {
+    width: 570px;
+    min-height: 354px;
+    padding: 0px;
+    margin: 0px;
+    padding-top: 77px;
+  }
+}
+
+.task__item-headline {
+  /* задаем стилизацию для заголовков каждого блока */
+  @media (max-width: @mobile-width-only) {
+    margin: 0 20px 42px 90px;
+    font-size: 24px;
+    line-height: 37px;
+    text-transform: uppercase;
+  }
+  @media (min-width: @tablet-width) {
+    margin: 0 250px 35px 50px;
+    font-size: 36px;
+    line-height: 36px;
+    text-transform: uppercase;
+  }
+  @media (min-width: @desktop-width) {
+    margin: 0 50px 74px 210px;
+  }
+}
+
+.task__item-description {
+  /* задаем стили для описания блоков набора массы и похудения */
+  font-family: Arial;
+  @media (max-width: @mobile-width-only) {
+    font-size: 14px;
+    line-height: 18px;
+    margin: 0 33px 0 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #c4c4c4;
+  }
+
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0 278px 47px 50px;
+    border-bottom: none;
+  }
+  @media (min-width: @desktop-width) {
+    margin: 0 52px 27px 51px;
+  }
+}
+
+.task__item-link {
+  text-transform: uppercase;
+  color: @main-color;
+  text-decoration: none;
+  @media (max-width: @mobile-width-only) {
+    font-size: 16px;
+    line-height: 16px;
+    text-align: center;
+    display: flex;
+    min-height: 55px;
+    align-items: center;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  @media (min-width: @tablet-width) {
+    display: inline-block;
+    font-size: 20px;
+    line-height: 30px;
+    margin: 0 50px 20px 50px;
+    padding: 20px 20px 10px 0px;
+    position: relative;
+    /* посмотреть как будем вставлять картинку
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      width:
+*/
+  }
+}

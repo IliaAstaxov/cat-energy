@@ -1,0 +1,93 @@
+// стилизуем пункты навигации
+
+// сетка пунктов навигации
+
+.main-nav {
+  grid-column-start: 1;
+  grid-column-end: -1;
+  grid-row-start: 2;
+  grid-row-end: 3;
+
+  @media (min-width: @tablet-width) {
+    grid-column-start: 2;
+    grid-column-end: -1;
+    grid-row-start: 1;
+    grid-row-end: 2;
+  }
+}
+
+.main-nav__toggle {
+  position: absolute;
+  top: 17px;
+  right: 20px;
+  width: 30px;
+  height: 30px;
+  border: none;
+  display: block;
+  cursor: pointer;
+  background-color: inherit;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
+.main-nav--closed .main-nav__toggle::before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 1px;
+  width: 36px;
+  height: 2px;
+  background-color: #000000;
+  box-shadow: 0 8px 0 0 #000000, 0 16px 0 0 #000000;
+}
+
+.main-nav--opened .main-nav__toggle {
+  position: absolute;
+  top: 17px;
+  right: 20px;
+  width: 30px;
+  height: 30px;
+  border: none;
+  display: block;
+  cursor: pointer;
+  background-color: inherit;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 12px;
+    left: 1px;
+    width: 36px;
+    height: 2px;
+    background-color: #000000;
+    transform: rotate(45deg);
+    box-shadow: none;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 12px;
+    left: 1px;
+    width: 36px;
+    height: 2px;
+    background-color: #000000;
+    transform: rotate(-45deg);
+  }
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
+@media (max-width: @mobile-width-only) {
+  .main-nav--closed .site-list {
+    display: none;
+  }
+}
+
+.main-nav--nojs .main-nav__toggle {
+  display: none;
+}

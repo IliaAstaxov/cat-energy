@@ -1,0 +1,211 @@
+// раздел "дополнительно" в форме заказаза
+
+.additionally {
+  .bordering;
+  .zeroing;
+  @media (min-width: @tablet-width) {
+    position: relative;
+  }
+}
+
+.additionally__wrapper {
+  /* задаем отступы для секции и верхний отступ для заголовка */
+  @media (max-width: @mobile-width-only) {
+    margin: 20px;
+  }
+  @media (min-width: @tablet-width) {
+    margin: 0 30px 0 70px;
+  }
+  @media (min-width: @desktop-width) {
+    margin: 0 auto;
+    width: 1220px;
+  }
+}
+
+.additionally__title {
+  /* задаем размер названию раздела формы */
+  @media (max-width: @mobile-width-only) {
+    font-size: 24px;
+    line-height: 26px;
+    width: 130px;
+    margin-bottom: 38px;
+    position: relative;
+    &::before {
+      content: "";
+      display: block;
+      width: 100vw;
+      height: 2px;
+      background-color: #68b738;
+      position: absolute;
+      top: 50%;
+      z-index: -2;
+    }
+    &::after {
+      content: "";
+      display: block;
+      height: 4px;
+      width: 150px;
+      background-color: white;
+      position: absolute;
+      top: 49%;
+      left: 0;
+      z-index: -1;
+    }
+  }
+  @media (min-width: @tablet-width) {
+    font-size: 36px;
+    line-height: 36px;
+    width: 211px;
+    margin-bottom: 54px;
+    margin-top: 30px;
+
+    &::before {
+      content: "";
+      display: block;
+      width: 100vw;
+      height: 2px;
+      background-color: #68b738;
+      position: absolute;
+      left: 0px;
+      top: 25%;
+      z-index: -2;
+    }
+    &::after {
+      content: "";
+      display: block;
+      width: 250px;
+      height: 10px;
+      background-color: white;
+      position: absolute;
+      left: 60px;
+      top: 24%;
+      z-index: -1;
+    }
+  }
+  @media (min-width: @desktop-width) {
+    &::before {
+      content: "";
+      display: block;
+      width: 100%;
+      height: 2px;
+      background-color: #68b738;
+      position: absolute;
+      left: 0px;
+      top: 28%;
+      z-index: -2;
+    }
+    &::after {
+      content: "";
+      display: block;
+      width: 260px;
+      height: 10px;
+      background-color: white;
+      position: relative;
+      left: -30px;
+      top: -18px;
+      z-index: -1;
+    }
+  }
+}
+.additionally__list {
+  /* убираем паддинги и булиты */
+  .buliting;
+  .zeroing;
+  @media (max-width: @mobile-width-only) {
+    display: flex;
+    flex-direction: column;
+  }
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto auto;
+  }
+}
+
+.additionally__item {
+  @media (max-width: @mobile-width-only) {
+    margin-bottom: 20px;
+  }
+  @media (min-width: @tablet-width) {
+    width: 323px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+  }
+  @media (min-width: @desktop-width) {
+    width: 323px;
+  }
+}
+
+.additionally__label {
+  /* задаем стили наваниям чекбоксов */
+  @media (max-width: @mobile-width-only) {
+    font-size: 16px;
+    line-height: 18px;
+    align-items: center;
+    text-transform: uppercase;
+    margin-left: 50px;
+    margin-bottom: 10px;
+    position: relative;
+
+    &::before {
+      content: "";
+      display: block;
+      width: 30px;
+      height: 29px;
+      border: 1px solid #cdcdcd;
+      position: absolute;
+      top: -3px;
+      left: -50px;
+    }
+  }
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+    align-items: center;
+    text-transform: uppercase;
+    margin-left: 50px;
+    margin-bottom: 10px;
+    position: relative;
+
+    &::before {
+      content: "";
+      display: block;
+      width: 30px;
+      height: 29px;
+      border: 1px solid #cdcdcd;
+      position: absolute;
+      top: 0px;
+      left: -50px;
+    }
+  }
+}
+
+.additionally__input:checked + .additionally__label::after {
+  @media (max-width: @mobile-width-only) {
+    content: "";
+    display: block;
+    width: 30px;
+    height: 30px;
+    background-image: url("../img/check.svg");
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 5px;
+    left: -43px;
+  }
+  @media (min-width: @tablet-width) {
+    content: "";
+    display: block;
+    width: 30px;
+    height: 30px;
+    background-image: url("../img/check.svg");
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 9px;
+    left: -42px;
+  }
+}

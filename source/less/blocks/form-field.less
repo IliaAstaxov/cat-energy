@@ -1,0 +1,63 @@
+// базовые стили для общего поля формы (считая заголовки)
+
+.form-field__wrapper {
+  /* задаем отступы для секции контактных данных и верхний отступ для заголовка */
+  @media (max-width: @mobile-width-only) {
+    margin: 0 20px;
+    padding-top: 26px;
+  }
+  @media (min-width: @tablet-width) {
+    margin: 0 30px 0 70px;
+    padding-top: 76px;
+  }
+  @media (min-width: @desktop-width) {
+    margin: 0 auto;
+    width: 1220px;
+  }
+}
+
+.form-field__preview {
+  @media (max-width: @mobile-width-only) {
+    padding-top: 27px;
+  }
+  @media (min-width: @tablet-width) {
+    padding-top: 60px;
+  }
+  @media (min-width: @desktop-width) {
+    padding-top: 74px;
+  }
+}
+
+.form-field__main-headline {
+  @media (max-width: @mobile-width-only) {
+    margin: 0 15px 37px 0;
+    font-size: 36px;
+    line-height: 36px;
+  }
+  @media (min-width: @tablet-width) {
+    margin: 0 221px 60px 0;
+    font-size: 60px;
+    line-height: 60px;
+  }
+  @media (min-width: @desktop-width) {
+    margin: 0 779px 60px 0;
+  }
+}
+
+.form-field__description {
+  @media (max-width: @mobile-width-only) {
+    font-size: 14px;
+    line-height: 18px;
+    text-transform: uppercase;
+    margin: 0 53px 40px 0;
+  }
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+    text-transform: uppercase;
+    margin: 0 346px 66px 0;
+  }
+  @media (min-width: @desktop-width) {
+    margin: 0 894px 66px 0;
+  }
+}

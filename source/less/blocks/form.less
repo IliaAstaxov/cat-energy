@@ -1,0 +1,67 @@
+//пункты самой фомы
+
+.form__main-fieldset {
+  @media (max-width: @mobile-width-only) {
+    min-height: 187px;
+    border-bottom: 1px solid #e7e7e7;
+  }
+  @media (min-width: @tablet-width) {
+    min-height: 270px;
+    border-bottom: 1px solid #e7e7e7;
+  }
+}
+
+.form__wrapper {
+  /* костыльный wrapper для первых двух блоков формы */
+  @media (max-width: @mobile-width-only) {
+    margin: 0 20px;
+  }
+  @media (min-width: @tablet-width) {
+    margin: 0 30px 0 70px;
+  }
+  @media (min-width: @desktop-width) {
+    margin: 0 auto;
+    width: 1220px;
+  }
+}
+
+.form__container {
+  /* для дестопной версии делаю флекс раскладку, чтобы первые два блока параметров кота поместились в линию */
+  @media (min-width: @desktop-width) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.form__mark {
+  /* приписка в самом конце */
+  @media (max-width: @mobile-width-only) {
+    font-family: Arial;
+    font-size: 14px;
+    line-height: 16px;
+    align-items: center;
+    text-align: center;
+  }
+  @media (min-width: @tablet-width) {
+    font-family: Arial;
+    font-size: 16px;
+    line-height: 16px;
+    align-items: center;
+    text-align: center;
+    display: inline-block;
+    margin-left: 40px;
+  }
+}
+
+.form__wrapper-down {
+  @media (max-width: @mobile-width-only) {
+    padding-bottom: 36px;
+  }
+  @media (min-width: @tablet-width) {
+    padding-bottom: 36px;
+  }
+  @media (min-width: @desktop-width) {
+    padding-bottom: 72px;
+  }
+}

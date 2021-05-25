@@ -1,0 +1,295 @@
+// блок "Живой пример"
+
+.example {
+  @media (max-width: @mobile-width-only) {
+    width: 100%;
+    background-color: @grey-background-color;
+  }
+}
+
+.example__wrapper {
+  @media (max-width: @mobile-width-only) {
+    margin: 0 20px;
+    padding-top: 27px;
+    padding-bottom: 35px;
+  }
+  @media (min-width: @tablet-width) {
+    margin: 0 30px;
+    padding-top: 43px;
+    padding-bottom: 64px;
+  }
+  @media (min-width: @desktop-width) {
+    margin: 0 auto;
+    width: 1220px;
+    padding-top: 43px;
+    padding-bottom: 64px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto;
+  }
+}
+
+.example__headline {
+  @media (max-width: @mobile-width-only) {
+    margin-top: 27px;
+    margin-bottom: 37px;
+    font-size: 36px;
+    line-height: 40px;
+  }
+  @media (min-width: @tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
+    margin-bottom: 64px;
+  }
+  @media (min-width: @desktop-width) {
+    margin: 0 0 146px 0;
+    padding-right: 45px;
+  }
+}
+
+.example__description {
+  @media (max-width: @mobile-width-only) {
+    font-family: Arial;
+    font-size: 14px;
+    line-height: 18px;
+    color: @color-for-description-example;
+    padding: 0;
+    margin-bottom: 23px;
+    br {
+      display: none;
+    }
+  }
+  @media (min-width: @tablet-width) {
+    font-family: Arial;
+    font-size: 16px;
+    line-height: 24px;
+    color: @color-for-description-example;
+    br {
+      display: none;
+    }
+  }
+  @media (min-width: @desktop-width) {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    width: 437px;
+    margin: 0 0 70px 0;
+  }
+}
+
+.example__full-result-of-cat {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  @media (min-width: @desktop-width) {
+    display: block;
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 3;
+    grid-row-end: 4;
+  }
+}
+
+.example__list {
+  @media (max-width: @mobile-width-only) {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 35px;
+  }
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    width: 366px;
+  }
+}
+
+.example__item {
+  @media (max-width: @mobile-width-only) {
+    border: 1px solid #cdcdcd;
+    position: relative;
+    width: 122px;
+    height: 56px;
+  }
+  @media (min-width: @tablet-width) {
+    border: 1px solid #cdcdcd;
+    position: relative;
+    width: 162px;
+    height: 72px;
+  }
+}
+
+.example__mean {
+  @media (max-width: @mobile-width-only) {
+    width: 75%;
+    background-color: @grey-background-color;
+    position: absolute;
+    left: 15px;
+    top: 15px;
+  }
+  @media (min-width: @tablet-width) {
+    width: 80%;
+    background-color: white;
+    position: absolute;
+    left: 15px;
+    top: 15px;
+  }
+}
+
+.example__number {
+  @media (max-width: @mobile-width-only) {
+    font-size: 24px;
+    line-height: 24px;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  @media (min-width: @tablet-width) {
+    font-size: 30px;
+    line-height: 37px;
+    text-align: center;
+    margin-bottom: 12px;
+  }
+}
+
+.example__number-description {
+  font-family: Arial;
+  color: @color-for-description-example;
+  margin: 0px;
+  text-align: center;
+  @media (max-width: @mobile-width-only) {
+    font-size: 12px;
+    line-height: 12px;
+  }
+  @media (min-width: @tablet-width) {
+    font-size: 14px;
+    line-height: 14px;
+  }
+}
+
+.example__result-of-money {
+  @media (max-width: @mobile-width-only) {
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  @media (min-width: @tablet-width) {
+    width: 178px;
+    font-size: 20px;
+    line-height: 20px;
+    text-align: right;
+    text-transform: uppercase;
+  }
+  @media (min-width: @desktop-width) {
+    width: auto;
+    text-align: left;
+    margin-top: 40px;
+  }
+}
+
+.example__result-of-price {
+  @media (min-width: @desktop-width) {
+    margin-left: 55px;
+  }
+}
+
+.example__toggle {
+  grid-column-start: 2;
+  grid-column-end: -1;
+  grid-row-start: 1;
+  grid-row-end: -1;
+}
+
+.example__photo {
+  display: block;
+  margin: 0 auto;
+  @media (max-width: @mobile-width-only) {
+    width: 311px;
+    height: 232px;
+  }
+}
+
+.example__toggle-line {
+  @media (max-width: @mobile-width-only) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 37px;
+  }
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 37px;
+  }
+}
+
+.example__line {
+  @media (max-width: @mobile-width-only) {
+    width: 77px;
+    height: 10px;
+    background-color: white;
+    border: 1px solid #d9d9d9;
+    border-radius: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    position: relative;
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 428px;
+    height: 6px;
+    border: 1px solid #d9d9d9;
+    background-color: #dcdcdc;
+    border-radius: 6px;
+    margin-left: 10px;
+    margin-right: 10px;
+    position: relative;
+
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 5px;
+      height: 5px;
+      background-color: #68b738;
+      left: 50%;
+      top: -8px;
+      border-radius: 50%;
+      border: 10px solid white;
+    }
+  }
+}
+
+.example__active-line {
+  @media (max-width: @mobile-width-only) {
+    width: 35px;
+    height: 7px;
+    background-color: #68b738;
+    border-radius: 10px;
+    position: absolute;
+    left: 3px;
+    top: 1px;
+  }
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
+}
+
+.example__toggle-point {
+  @media (max-width: @mobile-width-only) {
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+    text-align: center;
+    text-transform: uppercase;
+    border-bottom: 1px dotted black;
+  }
+}

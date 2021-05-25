@@ -1,0 +1,144 @@
+// корректируем блок с целями
+
+.sourse {
+  /*убираем fieldset */
+  .bordering;
+  .zeroing;
+  @media (max-width: @mobile-width-only) {
+    min-height: 157px;
+    border-bottom: 1px solid #e7e7e7;
+  }
+  @media (min-width: @tablet-width) {
+    min-height: 200px;
+    border-bottom: 1px solid #e7e7e7;
+  }
+  @media (min-width: @desktop-width) {
+    /* задаем размеры для десктопа в рамках flex элемента, создаем рамки для элемента отменяем padding (он здесь не актуален) */
+    min-height: 196px;
+    width: 570px;
+    border: 1px solid #e7e7e7;
+    padding: 0;
+  }
+}
+
+.sourse__list {
+  /* у списка убираем булиты и отступы */
+  .buliting;
+  .zeroing;
+  @media (max-width: @mobile-width-only) {
+    padding-top: 22px;
+  }
+  @media (min-width: @tablet-width) {
+    padding-top: 35px;
+  }
+  /* для десктопа внутренний отступ не нежен */
+  @media (min-width: @desktop-width) {
+    padding-top: 0;
+  }
+}
+
+.sourse__item {
+  /* настраиваем пункты радиокнопок (да размеры настраивал через li ) */
+  @media (max-width: @mobile-width-only) {
+    font-size: 16px;
+    line-height: 18px;
+    text-transform: uppercase;
+    color: @color-of-sourse;
+  }
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+    text-transform: uppercase;
+    color: @color-of-sourse;
+  }
+}
+
+.sourse__label {
+  @media (max-width: @mobile-width-only) {
+    display: block;
+    position: relative;
+    margin-bottom: 25px;
+    margin-left: 40px;
+    padding-top: 7px;
+
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 30px;
+      height: 30px;
+      border: 1px solid #cdcdcd;
+      border-radius: 50%;
+      left: -45px;
+      top: 0px;
+    }
+  }
+  @media (min-width: @tablet-width) {
+    display: block;
+    position: relative;
+    margin-bottom: 35px;
+    margin-left: 82px;
+    padding-top: 7px;
+
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      border: 1px solid #cdcdcd;
+      border-radius: 50%;
+      left: -75px;
+      top: 3px;
+    }
+  }
+  @media (min-width: @desktop-width) {
+    /* меняем отступы для названий радиокнопок для корректного отображения */
+    margin-left: 82px;
+    padding-top: 36px;
+    margin-bottom: 0;
+
+    &::before {
+      /* подравниваем кнопки на дектопе */
+      top: 30px;
+    }
+  }
+}
+
+.sourse__item:last-of-type .sourse__label {
+  /* делаю отступ для последней кнопки пункта строки радиокнопок */
+  @media (min-width: @desktop-width) {
+    padding-bottom: 36px;
+  }
+}
+
+.sourse__input:checked + .sourse__label::after {
+  @media (max-width: @mobile-width-only) {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 13px;
+    height: 13px;
+    border: none;
+    background-color: #68b738;
+    border-radius: 50%;
+    left: -35px;
+    top: 9px;
+  }
+  @media (min-width: @tablet-width) {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    border: none;
+    background-color: #68b738;
+    border-radius: 50%;
+    left: -63px;
+    top: 15px;
+  }
+  @media (min-width: @desktop-width) {
+    /*подравниваю зеленую точку включения для десктопа */
+    top: 42px;
+  }
+}

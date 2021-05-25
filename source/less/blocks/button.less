@@ -1,0 +1,54 @@
+// тут будут все кнопки
+
+.button-of-order {
+  /* кнопка на странице формы */
+  @media (max-width: @mobile-width-only) {
+    font-size: 16px;
+    line-height: 20px;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: inherit;
+    .buttoning;
+    width: 100%;
+    height: 40px;
+  }
+  @media (min-width: @tablet-width) {
+    font-size: 16px;
+    line-height: 20px;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: inherit;
+    .buttoning;
+    margin-top: 10px;
+    width: 282px;
+    height: 52px;
+    display: inline-block;
+  }
+  @media (min-width: @desktop-width) {
+    margin-top: 35px;
+    width: 568px;
+  }
+}
+
+.button-of-product {
+  /*кнопка на карточке товара */
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  .buttoning;
+  font-family: inherit;
+}
+
+.button-of-more {
+  /* стили для кнопки открытия дополниткльных товаров */
+  font-size: 16px;
+  line-height: 20px;
+  align-items: center;
+  text-align: center;
+  text-transform: uppercase;
+  color: @more-button-color;
+  background-color: @more-button-background-color;
+  font-family: inherit;
+  .bordering;
+}
