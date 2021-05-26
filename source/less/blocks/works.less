@@ -3,8 +3,6 @@
 .works {
   @media (max-width: @mobile-width-only) {
     width: 100%;
-    outline: 5px solid red;
-    outline-offset: -5px;
   }
 }
 
@@ -61,20 +59,39 @@
       width: 60px;
       height: 60px;
       margin-right: 20px;
-      background-color: green; /* временно */
+      background-color: #68b738; /* временно */
       flex-shrink: 0;
     }
     &:last-child {
       margin-bottom: 42px;
     }
-  }
-
-  &.works__item--paper::before {
-    @media (max-width: @mobile-width-only) {
+    &.works__item--paper::before {
       content: "";
       display: block;
       background-image: url(../img/leaf.svg);
       background-position: center;
+      background-repeat: no-repeat;
+    }
+    &.works__item--cup::before {
+      content: "";
+      display: block;
+      background-image: url(../img/tub.svg);
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+    &.works__item--fork::before {
+      content: "";
+      display: block;
+      background-image: url(../img/eat.svg);
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+    &.works__item--clock::before {
+      content: "";
+      display: block;
+      background-image: url(../img/clock.svg);
+      background-position: center;
+      background-repeat: no-repeat;
     }
   }
 
@@ -92,7 +109,7 @@
       display: block;
       width: 80px;
       height: 80px;
-      background-color: green; /* временно */
+      background-color: #68b738; /* временно */
       margin-bottom: 30px;
     }
 
@@ -105,6 +122,35 @@
       z-index: -1;
       top: -24px;
       right: 8%;
+    }
+
+    &.works__item--paper::before {
+      content: "";
+      display: block;
+      background-image: url(../img/leaf.svg);
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+    &.works__item--cup::before {
+      content: "";
+      display: block;
+      background-image: url(../img/tub.svg);
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+    &.works__item--fork::before {
+      content: "";
+      display: block;
+      background-image: url(../img/eat.svg);
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+    &.works__item--clock::before {
+      content: "";
+      display: block;
+      background-image: url(../img/clock.svg);
+      background-position: center;
+      background-repeat: no-repeat;
     }
   }
   @media (min-width: @desktop-width) {
